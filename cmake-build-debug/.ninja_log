@@ -1,0 +1,10 @@
+# ninja log v6
+3	296	7771488843532448	build.ninja	597e1cb9d195cd09
+841	980	7771485024088419	untitled8.exe	1f73be4ab1535db1
+97	3430	7771488933397987	CMakeFiles/paint.dir/main.cpp.obj	227a42507d951b28
+111	3644	7771488933537548	CMakeFiles/paint.dir/shapes/circle/circle.cpp.obj	a28dd0df0c76ec11
+141	3782	7771488933827539	CMakeFiles/paint.dir/shapes/triangle/triangle.cpp.obj	eb53dca1eaec9586
+106	4619	7771488933487595	CMakeFiles/paint.dir/shapes/rectangle/rectangle.cpp.obj	2950a1bbccf0bad1
+166	4841	7771488934078241	CMakeFiles/paint.dir/interface/interface.cpp.obj	f7346669d868bca6
+161	4846	7771488934027579	CMakeFiles/paint.dir/shapes/square/square.cpp.obj	bc22eaf0e3a10267
+4846	6307	7771488980887537	paint.exe	9203cec4994212bb
