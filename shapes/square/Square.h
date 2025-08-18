@@ -7,16 +7,17 @@
 #include <iostream>
 #include "../shape_merge_class.h"
 
-class square : public shape {
-protected:
-    std::stack<shape*> square_list;
-
-
+class Square : public Shape {
 public:
-    int get_size() override;
-    void add_shape()override;
-    void delete_object()override;
+    Square(float Side);
+    ~Square()=default;
+    void Calculation()override;
+    float GetSide();
+private:
+    float _Side;
+
 };
+
 
 
 #endif //UNTITLED8_SQUARE_H

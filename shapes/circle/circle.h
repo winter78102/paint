@@ -4,16 +4,14 @@
 #include <iostream>
 #include "../shape_merge_class.h"
 
-class circle: public shape {
-protected:
-    std::stack<shape*> circle_list;
-
-
-
+class Circle :public Shape {
 public:
-    int get_size() override;
-    void add_shape()override;
-    void delete_object()override;
+    Circle(float Radius);
+    ~Circle()=default;
+    void Calculation()override;
+    float GetRadius();
+private:
+    float _Radius;
 };
 
 

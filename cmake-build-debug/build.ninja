@@ -91,6 +91,12 @@ build CMakeFiles/paint.dir/storage/Storage.cpp.obj: CXX_COMPILER__paint_unscanne
   OBJECT_DIR = CMakeFiles\paint.dir
   OBJECT_FILE_DIR = CMakeFiles\paint.dir\storage
 
+build CMakeFiles/paint.dir/shapes/Shape.cpp.obj: CXX_COMPILER__paint_unscanned_Debug C$:/Users/Bahar/CLionProjects/paint/shapes/Shape.cpp || cmake_object_order_depends_target_paint
+  DEP_FILE = CMakeFiles\paint.dir\shapes\Shape.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\paint.dir
+  OBJECT_FILE_DIR = CMakeFiles\paint.dir\shapes
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target paint
@@ -99,7 +105,7 @@ build CMakeFiles/paint.dir/storage/Storage.cpp.obj: CXX_COMPILER__paint_unscanne
 #############################################
 # Link the executable paint.exe
 
-build paint.exe: CXX_EXECUTABLE_LINKER__paint_Debug CMakeFiles/paint.dir/main.cpp.obj CMakeFiles/paint.dir/shapes/rectangle/rectangle.cpp.obj CMakeFiles/paint.dir/shapes/circle/circle.cpp.obj CMakeFiles/paint.dir/shapes/triangle/triangle.cpp.obj CMakeFiles/paint.dir/shapes/square/square.cpp.obj CMakeFiles/paint.dir/interface/interface.cpp.obj CMakeFiles/paint.dir/storage/Storage.cpp.obj
+build paint.exe: CXX_EXECUTABLE_LINKER__paint_Debug CMakeFiles/paint.dir/main.cpp.obj CMakeFiles/paint.dir/shapes/rectangle/rectangle.cpp.obj CMakeFiles/paint.dir/shapes/circle/circle.cpp.obj CMakeFiles/paint.dir/shapes/triangle/triangle.cpp.obj CMakeFiles/paint.dir/shapes/square/square.cpp.obj CMakeFiles/paint.dir/interface/interface.cpp.obj CMakeFiles/paint.dir/storage/Storage.cpp.obj CMakeFiles/paint.dir/shapes/Shape.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\paint.dir

@@ -4,12 +4,12 @@
 
 #ifndef UNTITLED8_SHAPE_MERGE_CLASS_H
 #define UNTITLED8_SHAPE_MERGE_CLASS_H
-#include "shape.h"
-#include "rectangle/rectangle.h"
+#include "Shape.h"
+#include "rectangle/Rectangle.h"
 #include "circle/circle.h"
 #include "triangle/triangle.h"
-#include "square/square.h"
-#include "shapes/"
+#include "square/Square.h"
+#include "../storage/storage.h"
 #include <stack>
 
 

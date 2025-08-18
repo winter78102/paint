@@ -1,19 +1,13 @@
-
-
 #include "circle.h"
+#include "cmath"
 
-int circle::get_size() {
-    return circle_list.size();
+Circle::Circle(float Radius) {
+_Radius=Radius;
 }
-void circle::add_shape(){
-    circle_list.push( new rectangle());
-    total_list.push(circle_list.top());
-    printf(">>the circle added\n");
-}
-void circle::delete_object(){
-
-    circle_list.pop();
-    total_list.pop();
-
-    printf(">>the circle deleted\n");
+void Circle::Calculation() {
+    float Area,Perimetr;
+    Area=M_PI* pow(_Radius,2);
+    Perimetr=2*M_PI*_Radius;
+    SetAre(Area);
+    SetPerimeter(Perimetr);
 }
