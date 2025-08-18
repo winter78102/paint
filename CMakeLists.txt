@@ -16,4 +16,6 @@ add_executable(paint main.cpp
         shapes/square/square.h
         interface/interface.hpp
         interface/interface.cpp
+        storage/Storage.cpp
+        storage/Storage.h
 )
