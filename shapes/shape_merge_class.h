@@ -6,7 +6,7 @@
 #define UNTITLED8_SHAPE_MERGE_CLASS_H
 #include "Shape.h"
 #include "rectangle/Rectangle.h"
-#include "circle/circle.h"
+#include "circle/Circle.h"
 #include "triangle/triangle.h"
 #include "square/Square.h"
 #include "../storage/storage.h"

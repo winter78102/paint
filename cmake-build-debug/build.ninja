@@ -55,14 +55,14 @@ build CMakeFiles/paint.dir/main.cpp.obj: CXX_COMPILER__paint_unscanned_Debug C$:
   OBJECT_DIR = CMakeFiles\paint.dir
   OBJECT_FILE_DIR = CMakeFiles\paint.dir
 
-build CMakeFiles/paint.dir/shapes/rectangle/rectangle.cpp.obj: CXX_COMPILER__paint_unscanned_Debug C$:/Users/Bahar/CLionProjects/paint/shapes/rectangle/rectangle.cpp || cmake_object_order_depends_target_paint
-  DEP_FILE = CMakeFiles\paint.dir\shapes\rectangle\rectangle.cpp.obj.d
+build CMakeFiles/paint.dir/shapes/rectangle/Rectangle.cpp.obj: CXX_COMPILER__paint_unscanned_Debug C$:/Users/Bahar/CLionProjects/paint/shapes/rectangle/Rectangle.cpp || cmake_object_order_depends_target_paint
+  DEP_FILE = CMakeFiles\paint.dir\shapes\rectangle\Rectangle.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\paint.dir
   OBJECT_FILE_DIR = CMakeFiles\paint.dir\shapes\rectangle
 
-build CMakeFiles/paint.dir/shapes/circle/circle.cpp.obj: CXX_COMPILER__paint_unscanned_Debug C$:/Users/Bahar/CLionProjects/paint/shapes/circle/circle.cpp || cmake_object_order_depends_target_paint
-  DEP_FILE = CMakeFiles\paint.dir\shapes\circle\circle.cpp.obj.d
+build CMakeFiles/paint.dir/shapes/circle/Circle.cpp.obj: CXX_COMPILER__paint_unscanned_Debug C$:/Users/Bahar/CLionProjects/paint/shapes/circle/Circle.cpp || cmake_object_order_depends_target_paint
+  DEP_FILE = CMakeFiles\paint.dir\shapes\circle\Circle.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\paint.dir
   OBJECT_FILE_DIR = CMakeFiles\paint.dir\shapes\circle
@@ -73,14 +73,14 @@ build CMakeFiles/paint.dir/shapes/triangle/triangle.cpp.obj: CXX_COMPILER__paint
   OBJECT_DIR = CMakeFiles\paint.dir
   OBJECT_FILE_DIR = CMakeFiles\paint.dir\shapes\triangle
 
-build CMakeFiles/paint.dir/shapes/square/square.cpp.obj: CXX_COMPILER__paint_unscanned_Debug C$:/Users/Bahar/CLionProjects/paint/shapes/square/square.cpp || cmake_object_order_depends_target_paint
-  DEP_FILE = CMakeFiles\paint.dir\shapes\square\square.cpp.obj.d
+build CMakeFiles/paint.dir/shapes/square/Square.cpp.obj: CXX_COMPILER__paint_unscanned_Debug C$:/Users/Bahar/CLionProjects/paint/shapes/square/Square.cpp || cmake_object_order_depends_target_paint
+  DEP_FILE = CMakeFiles\paint.dir\shapes\square\Square.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\paint.dir
   OBJECT_FILE_DIR = CMakeFiles\paint.dir\shapes\square
 
-build CMakeFiles/paint.dir/interface/interface.cpp.obj: CXX_COMPILER__paint_unscanned_Debug C$:/Users/Bahar/CLionProjects/paint/interface/interface.cpp || cmake_object_order_depends_target_paint
-  DEP_FILE = CMakeFiles\paint.dir\interface\interface.cpp.obj.d
+build CMakeFiles/paint.dir/interface/Interface.cpp.obj: CXX_COMPILER__paint_unscanned_Debug C$:/Users/Bahar/CLionProjects/paint/interface/Interface.cpp || cmake_object_order_depends_target_paint
+  DEP_FILE = CMakeFiles\paint.dir\interface\Interface.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\paint.dir
   OBJECT_FILE_DIR = CMakeFiles\paint.dir\interface
@@ -105,7 +105,7 @@ build CMakeFiles/paint.dir/shapes/Shape.cpp.obj: CXX_COMPILER__paint_unscanned_D
 #############################################
 # Link the executable paint.exe
 
-build paint.exe: CXX_EXECUTABLE_LINKER__paint_Debug CMakeFiles/paint.dir/main.cpp.obj CMakeFiles/paint.dir/shapes/rectangle/rectangle.cpp.obj CMakeFiles/paint.dir/shapes/circle/circle.cpp.obj CMakeFiles/paint.dir/shapes/triangle/triangle.cpp.obj CMakeFiles/paint.dir/shapes/square/square.cpp.obj CMakeFiles/paint.dir/interface/interface.cpp.obj CMakeFiles/paint.dir/storage/Storage.cpp.obj CMakeFiles/paint.dir/shapes/Shape.cpp.obj
+build paint.exe: CXX_EXECUTABLE_LINKER__paint_Debug CMakeFiles/paint.dir/main.cpp.obj CMakeFiles/paint.dir/shapes/rectangle/Rectangle.cpp.obj CMakeFiles/paint.dir/shapes/circle/Circle.cpp.obj CMakeFiles/paint.dir/shapes/triangle/triangle.cpp.obj CMakeFiles/paint.dir/shapes/square/Square.cpp.obj CMakeFiles/paint.dir/interface/Interface.cpp.obj CMakeFiles/paint.dir/storage/Storage.cpp.obj CMakeFiles/paint.dir/shapes/Shape.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\paint.dir

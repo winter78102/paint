@@ -5,7 +5,9 @@
 Rectangle::Rectangle(float Length, float Width) {
     _Length=Length;
     _Width=Width;
-}
+    _name="Rectangle";
+    printf(" a rectangle with length=%f and width=%f built\n",Length,Width);
+    }
 float Rectangle::GetLength(){
     return _Length;
 }
@@ -14,9 +16,6 @@ float Rectangle::GetWidth(){
 }
 
 void Rectangle::Calculation() {
-    float Area,Perimeter;
-    Area=_Length*_Width;
-    Perimeter=2*(_Length+_Width);
-    SetPerimeter(Perimeter);
-    SetAre(Area);
+    _Area = _Length * _Width;
+    _Perimeter = 2 * (_Length + _Width);
 }

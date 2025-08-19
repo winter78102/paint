@@ -1,27 +1,26 @@
 #include <iostream>
-#include "interface/interface.hpp"
+#include "interface/Interface.hpp"
 
 
 int main() {
-    interface interface_object;
-    int button;
+    Interface InterfaceObject;
+    int Button;
     while(1){
+        InterfaceObject.Start();
 
-        interface_object.start();
-        button=interface_object.get_last_button();
-        switch(button){
+        switch (InterfaceObject.GetLastButton()) {
             case 1:
-                interface_object.stage_2_1_3();
-                interface_object.stage_3_1();
+            InterfaceObject.ChoseShape();
+            InterfaceObject.NumberOfShape();
+            InterfaceObject.GetParameter();
                 break;
-
             case 2:
-                interface_object.stage_1_2();
+                InterfaceObject.ShowList();
+                InterfaceObject.ShowDetailedList();
                 break;
             case 3:
-                interface_object.stage_2_1_3();
-                interface_object.stage_3_3();
-
+                InterfaceObject.ShowDeleteList();
+                break;
         }
 
 

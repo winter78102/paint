@@ -8,14 +8,14 @@ add_executable(paint main.cpp
         shapes/rectangle/Rectangle.cpp
         shapes/rectangle/Rectangle.h
         shapes/shape_merge_class.h
-        shapes/circle/circle.cpp
-        shapes/circle/circle.h
+        shapes/circle/Circle.cpp
+        shapes/circle/Circle.h
         shapes/triangle/triangle.cpp
         shapes/triangle/triangle.h
         shapes/square/Square.cpp
         shapes/square/Square.h
-        interface/interface.hpp
-        interface/interface.cpp
+        interface/Interface.hpp
+        interface/Interface.cpp
         storage/Storage.cpp
         storage/Storage.h
         shapes/Shape.cpp

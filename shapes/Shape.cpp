@@ -3,12 +3,15 @@
 float Shape::GetPerimeter(){
     return _Perimeter;
 }
-void Shape::SetPerimeter(float CalculatedPerimeter) {
-    _Perimeter=CalculatedPerimeter;
-}
+
 float Shape::GetArea() {
     return _Area;
 }
-void Shape::SetAre(float CalculatedArea) {
-    _Area=CalculatedArea;
+
+int Shape::GetId() {
+    return _Id;
 }
+std::string Shape::GetName() {
+    return _name;
+}
+

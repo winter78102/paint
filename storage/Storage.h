@@ -4,29 +4,18 @@
 
 #ifndef UNTITLED8_STORAGE_H
 #define UNTITLED8_STORAGE_H
-
 #include <vector>
+#include <memory>
 #include "../shapes/shape_merge_class.h"
 
 class Storage {
 public:
-
-
-protected:
-    void SetCircleList(shape* NewCircleObject);
-    void SetRectangleList(shape* NewRectangleObject);
-    void SetTriangleList(shape* NewTriangleObject);
-    void SetSquareList(shape* NewSquareObject);
-
+    void AddShapeList(std::shared_ptr<Shape> NewCircleObject);
+    std::shared_ptr<Shape> GetShapeList( int Index);
+    int GetShapeListSize();
+    void DeleteShape(int Index);
+    int GetShapeSize(std::string);
 private:
-    std::vector<shape*> _CircleList;
-    std::vector<shape*> _RectangleList;
-    std::vector<shape*> _TriangleList;
-    std::vector<shape*> _SquareList;
-
-
-
+    std::vector<std::shared_ptr<Shape>> _ShapeList;
 };
-
-
 #endif //UNTITLED8_STORAGE_H

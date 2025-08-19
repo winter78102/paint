@@ -1,19 +1,32 @@
-//
-// Created by Bahar on 8/18/2025.
-//
 
 #include "Storage.h"
 
+void Storage::AddShapeList(std::shared_ptr<Shape> NewObject) {
+    _ShapeList.push_back(NewObject);
+    NewObject->Calculation();
 
-void Storage::SetCircleList(shape* NewCircleObject){
-    _CircleList.push_back(NewCircleObject);
 }
-void Storage::SetRectangleList(shape *NewRectangleObject) {
-    _RectangleList.push_back(NewRectangleObject);
+std::shared_ptr<Shape> Storage::GetShapeList(int Index) {
+    return _ShapeList[Index];
 }
-void Storage::SetTriangleList(shape *NewTriangleObject) {
-    _TriangleList.push_back(NewTriangleObject);
+int Storage::GetShapeSize(std:: string Name)  {
+   int counter=0;
+   for(int i=0;i<_ShapeList.size();i++){
+       if(_ShapeList[i]->GetName()==Name){
+           counter++;
+       }
+   }
+    return counter;
 }
-void Storage::SetSquareList(shape *NewSquareObject) {
-    _SquareList.push_back(NewSquareObject);
+void Storage::DeleteShape(int Index) {
+ _ShapeList.erase(_ShapeList.begin()+Index);
 }
+int Storage::GetShapeListSize() {
+    return _ShapeList.size();
+}
+
+
+
+
+
+

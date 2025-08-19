@@ -18,4 +18,5 @@ private:
     float _Width;
 };
 
+
 #endif //UNTITLED8_RECTANGLE_H
