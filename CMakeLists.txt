@@ -1,22 +1,10 @@
 cmake_minimum_required(VERSION 3.30)
-project(untitled8)
-
+project(Paint)
 set(CMAKE_CXX_STANDARD 20)
-
-add_executable(paint main.cpp
-        shapes/Shape.h
-        shapes/rectangle/Rectangle.cpp
-        shapes/rectangle/Rectangle.h
-        shapes/shape_merge_class.h
-        shapes/circle/Circle.cpp
-        shapes/circle/Circle.h
-        shapes/triangle/triangle.cpp
-        shapes/triangle/triangle.h
-        shapes/square/Square.cpp
-        shapes/square/Square.h
-        interface/Interface.hpp
-        interface/Interface.cpp
-        storage/Storage.cpp
-        storage/Storage.h
-        shapes/Shape.cpp
+file(GLOB_RECURSE SOURCES src/*.cpp)
+file(GLOB_RECURSE HEADERS "${PROJECT_SOURCE_DIR}/include/*.h")
+add_executable(Paint ${SOURCES} ${HEADERS})
+        target_include_directories(${PROJECT_NAME} PRIVATE
+        ${PROJECT_SOURCE_DIR}/include
 )
+

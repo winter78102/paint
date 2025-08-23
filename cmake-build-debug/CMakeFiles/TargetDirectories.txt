@@ -1,3 +1,0 @@
-C:/Users/Bahar/CLionProjects/paint/cmake-build-debug/CMakeFiles/paint.dir
-C:/Users/Bahar/CLionProjects/paint/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Bahar/CLionProjects/paint/cmake-build-debug/CMakeFiles/rebuild_cache.dir
