@@ -1,35 +1,39 @@
 
 #include <interface/Interface.hpp>
+#include <iostream>
 #include <array>
+
 void Interface::Start(){
     int Button;
-    printf(">>choose one of these options with write their number");
-    printf(" \n    >>1- add new shape  \n    >>2- watch the list \n    >>3- delete a shape \n");
-    printf(">>");
-    scanf("%d", &Button);
-    if(CheckInput(Button)){
-        _LastButton=Button;
+        printf(">>choose one of these options with write their number");
+        printf(" \n    >>1- add new shape  \n    >>2- watch the list \n    >>3- delete a shape \n");
+        printf(">>");
+        std::cin>>Button;
+        Button=CheckInput(Button);
+            _LastButton=Button;
+
     }
 
-}
 void Interface::ChoseShape(){
-    int Button;
-    printf(">>please choose your desire shape \n");
-    printf("1 -> rectangle\n2 -> circle\n3 -> triangle\n4 -> Square\n");
-    printf(">>");
-    scanf("%d", &Button);
-    if(CheckInput(Button)){
-        _LastButton=Button;
-    }
+       int Button;
+       printf(">>please choose your desire shape \n");
+       printf("1 -> rectangle\n2 -> circle\n3 -> triangle\n4 -> Square\n");
+       printf(">>");
+       std::cin>>Button;
+       Button=CheckInput(Button);
+       _LastButton=Button;
 }
+
 void Interface::NumberOfShape() {
     int AddedNumber;
     printf(">>how many do you want to add from this shape? enter the number \n>>");
-    scanf("%d", &AddedNumber);
-    if(CheckInput(AddedNumber)){
+    std::cin>>AddedNumber;
+    AddedNumber=CheckInput(AddedNumber);
         _AddedNumber=AddedNumber;
-    }
+
+
 }
+
 void Interface::GetParameter() {
     float Length,Width;
     float Radius;
@@ -37,34 +41,46 @@ void Interface::GetParameter() {
     for (int i = 0; i < _AddedNumber; i++) {
         switch(_LastButton) {
             case 1:
+
                 printf(">> type the length \n");
                 std::cin >> Length;
+                Length=CheckInput(Length);
                 printf(">> type the Width \n");
                 std::cin >> Width;
+                Width=CheckInput(Width);
                 _ShapeStore.AddShapeList(std::make_shared<Rectangle>(Length, Width));
                 break;
+
             case 2:
                 printf(">> type the radius \n");
                 std::cin >> Radius;
+                Radius=CheckInput(Radius);
                 _ShapeStore.AddShapeList((std::make_shared<Circle>(Radius)));
+
                 break;
             case 3:
                 printf(">> type the  first Side \n");
                 std::cin >> Side1;
-                printf(">> type the  second Side \n");
-                std::cin >> Side2;
-                printf(">> type the  third Side \n");
-                std::cin >> Side3;
-                _ShapeStore.AddShapeList(std::make_shared<Triangle>(Side1,Side2,Side3));
-                break;
-            case 4:
-                printf(">> type the  Side \n");
-                std::cin >> Side1;
-                _ShapeStore.AddShapeList(std::make_shared<Square>(Side1));
-                break;
+                Side1=CheckInput(Side1);
+                    printf(">> type the  second Side \n");
+                    std::cin >> Side2;
+                    Side2=CheckInput(Side2);
+                     printf(">> type the  third Side \n");
+                        std::cin >> Side3;
+                          Side2=CheckInput(Side3);
+                            _ShapeStore.AddShapeList(std::make_shared<Triangle>(Side1, Side2, Side3));
+                            break;
+
+                        case 4:
+                            printf(">> type the  Side \n");
+                        std::cin >> Side1;
+                         Side1= CheckInput(Side1);
+                            _ShapeStore.AddShapeList(std::make_shared<Square>(Side1));
+                            break;
+                        }
         }
     }
-}
+
 
 void Interface::ShowList(){
     int Button;
@@ -74,9 +90,10 @@ void Interface::ShowList(){
     printf("3 -> triangle     number = %d\n",_ShapeStore.GetShapeSize("Triangle"));
     printf("4 -> Square       number = %d\n",_ShapeStore.GetShapeSize("Square"));
     scanf("%d", &Button);
-    if(CheckInput(Button)){
+    Button=CheckInput(Button);
+
         _LastButton=Button;
-    }
+
 }
 
 void Interface::ShowDetailedList() {
@@ -89,8 +106,9 @@ void Interface::ShowDetailedList() {
                     printf(">> number %d Rectangle   : Area=%f , Perimeter =%f  , Length=%f   , Width=%f \n"
                             ,Counter++,_ShapeStore.GetShapeList(i)->GetArea()
                             ,_ShapeStore.GetShapeList(i)->GetPerimeter()
-                            ,_ShapeStore.GetShapeList(i)->GetParameter()[0],
-                           _ShapeStore.GetShapeList(i)->GetParameter()[1]);
+                            ,std::dynamic_pointer_cast<Rectangle>(_ShapeStore.GetShapeList(i))->GetLength(),
+                           std::dynamic_pointer_cast<Rectangle>(_ShapeStore.GetShapeList(i))->GetWidth());
+
             }
             break;
         case 2:
@@ -100,7 +118,7 @@ void Interface::ShowDetailedList() {
                     printf(">> number %d Circle   : Area=%f ,  Perimeter=%f and Radius=%f\n"
                             ,Counter++,_ShapeStore.GetShapeList(i)->GetArea()
                             ,_ShapeStore.GetShapeList(i)->GetPerimeter()
-                            ,_ShapeStore.GetShapeList(i)->GetParameter()[0]);
+                            ,std::dynamic_pointer_cast<Circle>(_ShapeStore.GetShapeList(i))->GetRadius());
             }
             break;
         case 3:
@@ -109,9 +127,9 @@ void Interface::ShowDetailedList() {
                     printf(">> number %d Triangle   : Area=%f and  Perimeter=%f   Side1=%f  Side2=%f   Side3=%f\n"
                             ,Counter++,_ShapeStore.GetShapeList(i)->GetArea(),
                             _ShapeStore.GetShapeList(i)->GetPerimeter(),
-                            _ShapeStore.GetShapeList(i)->GetParameter()[0],
-                           _ShapeStore.GetShapeList(i)->GetParameter()[1],
-                           _ShapeStore.GetShapeList(i)->GetParameter()[2]);
+                           std::dynamic_pointer_cast<Triangle>(_ShapeStore.GetShapeList(i))->GetSide1(),
+                            std::dynamic_pointer_cast<Triangle>(_ShapeStore.GetShapeList(i))->GetSide2(),
+                            std::dynamic_pointer_cast<Triangle>(_ShapeStore.GetShapeList(i))->GetSide3());
             }
             break;
         case 4:
@@ -120,7 +138,7 @@ void Interface::ShowDetailedList() {
                     printf(">> number %d Square   : Area=%f and  Perimeter=%f  Side=%f\n"
                             ,Counter++,_ShapeStore.GetShapeList(i)->GetArea(),
                             _ShapeStore.GetShapeList(i)->GetPerimeter(),
-                           _ShapeStore.GetShapeList(i)->GetParameter()[0]);
+                           std::dynamic_pointer_cast<Square>(_ShapeStore.GetShapeList(i))->GetSide());
             }
             break;
     }
@@ -135,24 +153,20 @@ void Interface::ShowDeleteList(){
                _ShapeStore.GetShapeList(i)->GetArea(), _ShapeStore.GetShapeList(i)->GetPerimeter());
     }
     std::cin>>_LastButton;
+    _LastButton=CheckInput(_LastButton);
     _ShapeStore.DeleteShape(_LastButton-1);
     printf(">>the  %s deleted\n",_ShapeStore.GetShapeList(_LastButton-1)->GetName().c_str());
 }
-bool Interface::CheckInput(int button){
-    bool Check;
-    for(int i=1; i<10 ;i++){
-        if(i==button){
-            Check=1;
-        }
-    }
-        if(Check==1){
-            return 1;
-        }
-        std::cout<<">>wrong input \n";
 
-    return 0;
-
-
-
-
+int Interface::CheckInput(int Button){
+   while(std::cin.fail()) {
+       std::cerr << " wrong input try again\n";
+       std::cin.clear();
+       std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+       std::cout << ">>";
+       int Temp;
+       std::cin>>Temp;
+       return Temp;
+   }
+   return Button;
 }

@@ -18,9 +18,14 @@ void Triangle::Calculation() {
 
 }
 
-std::array<float,3> Triangle:: GetParameter(){
-    return {_Side1,_Side2,_Side3};
-
+float Triangle:: GetSide1(){
+    return _Side1;
+}
+float Triangle:: GetSide2(){
+    return _Side2;
+}
+float Triangle:: GetSide3(){
+    return _Side3;
 }
 
 

@@ -15,8 +15,10 @@ void Rectangle::Calculation() {
     _Area = _Length * _Width;
     _Perimeter = 2 * (_Length + _Width);
 }
-std::array<float,3> Rectangle:: GetParameter(){
 
-    return {_Length,_Width,0};
-
+float Rectangle::GetLength(){
+    return _Length;
+}
+float Rectangle::GetWidth(){
+    return _Width;
 }

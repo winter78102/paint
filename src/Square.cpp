@@ -12,7 +12,6 @@ void Square:: Calculation(){
     _Perimeter=_Side*4;
     _Area= pow(_Side,2);
 }
-std::array<float,3> Square:: GetParameter(){
-    return {_Side,0,0};
-
+float Square::GetSide(){
+    return _Side;
 }

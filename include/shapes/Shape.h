@@ -12,7 +12,6 @@ class Shape {
 public:
     Shape()=default;
    virtual void Calculation()=0;
-   virtual std::array<float,3> GetParameter()=0;
    float GetPerimeter();
    float GetArea();
    std::string GetName();

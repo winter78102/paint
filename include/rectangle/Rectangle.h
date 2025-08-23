@@ -13,7 +13,8 @@ public:
     Rectangle(float Length , float _Width);
     ~Rectangle()=default;
     void Calculation()override;
-    std::array<float,3> GetParameter()override;
+    float GetLength();
+    float GetWidth();
 
 
 private:

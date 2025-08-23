@@ -10,7 +10,7 @@ public:
     Circle(float Radius);
     ~Circle()=default;
     void Calculation()override;
-    std::array<float,3> GetParameter()override;
+    float GetRadius();
 private:
     float _Radius;
 };

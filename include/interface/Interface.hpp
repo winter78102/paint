@@ -21,7 +21,7 @@ public:
     int GetLastButton();
     void ShowDetailedList();
     void ShowDeleteList();
-    bool CheckInput(int button);
+    int CheckInput(int Button);
 
 private:
     Storage _ShapeStore;

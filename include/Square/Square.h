@@ -12,7 +12,7 @@ public:
     Square(float Side);
     ~Square()=default;
     void Calculation()override;
-    std::array<float,3> GetParameter()override;
+    float GetSide();
 
 
 

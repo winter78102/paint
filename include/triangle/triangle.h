@@ -11,7 +11,10 @@ public:
     Triangle(float Side1,float Side2 , float Side3);
     Triangle()=default;
     void Calculation()override;
-    std::array<float,3> GetParameter()override;
+    float GetSide1();
+    float GetSide2();
+    float GetSide3();
+
 
 private:
     float _Side1;
