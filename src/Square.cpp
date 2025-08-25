@@ -2,8 +2,7 @@
 #include "cmath"
 #include <array>
 
-Square::Square(float Side) {
-    _Side=Side;
+Square::Square(float Side):_Side(Side) {
     _name="Square";
     printf(" a Square with side=%f  built\n",Side);
 }

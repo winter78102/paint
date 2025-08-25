@@ -3,8 +3,8 @@
 #include <array>
 #include "cmath"
 
-Circle::Circle(float Radius) {
-_Radius=Radius;
+Circle::Circle(float Radius ):_Radius(Radius) {
+
 _name="Circle";
 printf(" a Circle with radius=%f  built\n",Radius);
 Calculation();

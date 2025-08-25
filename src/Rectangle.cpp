@@ -3,9 +3,7 @@
 #include "iostream"
 
 
-Rectangle::Rectangle(float Length, float Width) {
-    _Length=Length;
-    _Width=Width;
+Rectangle::Rectangle(float Length, float Width):_Length(Length),_Width(Width) {
     _name="Rectangle";
     printf(" a rectangle with length=%f and width=%f built\n",Length,Width);
     }
